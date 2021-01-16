@@ -1,0 +1,1 @@
+# setup phần mềm QLCL GXD
