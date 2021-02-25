@@ -1,16 +1,39 @@
 {
-  "name": "my_vue_press",
+  "name": "phpdoc-vuepress",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "repository": "git@github.com:theanh0909/qlcl.git",
+  "license": "MIT",
+  "author": "Nguyễn Thế Anh <theanh@gxd.vn>",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vuepress dev",
-    "docs:build": "vuepress build"
+    "build": "vuepress build docs -d dist",
+    "postbuild": "vuepress-sitemap -H https://qlcl.gxd.vn -d dist",
+    "cs:fix": "prettier --write .",
+    "cs:lint": "prettier --check .",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs"
   },
-  "author": "",
-  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.1",
+    "@vuepress/plugin-google-analytics": "^1.8.1",
+    "vuepress": "^1.8.1",
+    "vuepress-plugin-sitemap": "^2.3.1",
+    "vuepress-plugin-zooming": "^1.1.8",
+    "vuepress-theme-yuu": "^3.0.0"
+  },
   "devDependencies": {
-    "vuepress": "^1.8.0"
+    "@prettier/plugin-xml": "^0.13.0",
+    "husky": "^4.3.8",
+    "prettier": "^2.2.1",
+    "prettier-plugin-packagejson": "^2.2.9",
+    "prettier-plugin-twig-melody": "^0.4.6",
+    "pretty-quick": "^3.1.0"
   }
 }
