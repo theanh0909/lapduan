@@ -1,2 +1,1 @@
-sudo cp ./docs/.vitepress/dist/* ./ -R
- 
+sudo cp ./dist/* ./ -R
