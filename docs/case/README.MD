@@ -1,4 +1,4 @@
-Các tình huống trong sử dụng phần mềm QLCL GXD.
+Các tình huống trong sử dụng phần mềm Lập dự án GXD.
 
 ## CHƯƠNG2. TÌNH HUỐNG KHI SỬ DỤNG QLCL GXD
 
@@ -6,7 +6,7 @@ Sau khi nắm được các thao tác cơ bản nói trên, bạn bắt đầu �
 
 ### Tạo dự án mới lưu trữ dữ liệu công trình theo công nghệ đám mây
 
-Bạn cài Dropbox vào đường dẫn E:\Dropbox, mỗi công trình hãy tạo 1 thư mục trong đó. Ví dụ bạn tạo thư mục _ **E:\Dropbox\Cong trinh** _như trong hình:
+Bạn cài Dropbox vào đường dẫn E:\Dropbox, mỗi công trình hãy tạo 1 thư mục trong đó. Ví dụ bạn tạo thư mục \_ **E:\Dropbox\Cong trinh** \_như trong hình:
 
 (RackMultipart20210217-4-1hba8jv_html_a435de6acfcbc579AnhAnh)
 
@@ -141,7 +141,7 @@ Trong khi phần mềm QLCL GXD có mục mã HSNT là cố định nên tên bi
 
 Trả lời:
 
-- **Cách 1** : Thực hiện chỉnh sửa trong sheet **Danh muc NT cong viec**/  **Danh muc NT vat lieu**.
+- **Cách 1** : Thực hiện chỉnh sửa trong sheet **Danh muc NT cong viec**/ **Danh muc NT vat lieu**.
 
   - Tìm đến ô chứa **Mã HSNT** , Click chuột và thêm vào đuôi **/NTNB/...** như hình 4.1
 
@@ -156,7 +156,7 @@ _Chỉnh sửa mã HSNT trong Sheet Danh muc_
 - Vào sheet **Nghiệm thu nội bộ công việc** (NT noi bo cong viec).
 - Đặt dấu nhắc chuột vào ô chưa công thức đánh số biên bản (ở đây là ô $O$5). Công thức cũ:
 
-=BIÊN BẢN SỐ: &amp;VLOOKUP($O$5;B\_DMBBNTCV;COLUMN(&#39;Danh
+=BIÊN BẢN SỐ: &amp;VLOOKUP($O$5;B_DMBBNTCV;COLUMN(&#39;Danh
 
 muc NT cong viec&#39;!D$1);0)
 
@@ -168,7 +168,7 @@ _Công thức mặc định đánh mã biên bản_
 
 - Ta sẽ sửa lại công thức đánh số biên bản ở thanh công thức như sau:
 
-=BIÊN BẢN SỐ: &amp;VLOOKUP($O$5;B\_DMBBNTCV;COLUMN(&#39;Danh muc NT cong viec&#39;!D$1);0)&amp;/NTNB/...
+=BIÊN BẢN SỐ: &amp;VLOOKUP($O$5;B_DMBBNTCV;COLUMN(&#39;Danh muc NT cong viec&#39;!D$1);0)&amp;/NTNB/...
 
 (RackMultipart20210217-4-1hba8jv_html_1f05baf49aa0e658AnhAnh)
 
@@ -351,15 +351,15 @@ Bước 2 : Đánh số thứ tự cho công tác kiểm tra đó để tiêu ch
 - Đối với những công việc có lấy mẫu, nếu tại cột Mã HSNT trống, thì phần mềm sẽ đổ số biên bản mặc định như lập trình của phần mềm (Số biên bản được đánh lần lượt từ 1 đến hết cho những công việc có lấy mẫu).
 
 | (RackMultipart20210217-4-1hba8jv_html_a34176f3fd6e9326AnhAnh) | (RackMultipart20210217-4-1hba8jv_html_e904a441be03b0c2AnhAnh) |
-| --- | --- |
-| _Danh mục NT công việc_ | _Biên bản_ |
+| ------------------------------------------------------------- | ------------------------------------------------------------- |
+| _Danh mục NT công việc_                                       | _Biên bản_                                                    |
 
 Nếu tại cột mã HSNT có đánh mã HSNT (Đánh mã cùng dòng lấy mẫu – dòng có ký hiệu LM) thì phần mềm sẽ đổ số biên bản lấy mẫu theo mã mà bạn vừa đặt ở cột mã HSNT.
 
 | (RackMultipart20210217-4-1hba8jv_html_3d5cca1766b5dcffAnhAnh) | (RackMultipart20210217-4-1hba8jv_html_e3298f8455b5c989AnhAnh) |
-| --- | --- |
-| _Danh mục NT công việc_ | _Biên bản_
- |
+| ------------------------------------------------------------- | ------------------------------------------------------------- |
+| _Danh mục NT công việc_                                       | _Biên bản_                                                    |
+|  |
 
 - Có thể Spin biên bản lấy mẫu theo 2 cách:
 

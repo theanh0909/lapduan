@@ -4,15 +4,15 @@ module.exports = {
 
   // Base URL. Useful for GitHub pages.
   base: '/',
-  // base: '/qlcl',
+  // base: '/lapduan',
 
   theme: 'yuu',
 
   // Title of your project
-  title: 'Phần mềm QLCL GXD 0974 889 500',
+  title: 'Phần mềm Lập Dự án GXD 0974 889 500',
 
   // Description of your project
-  description: 'Hướng dẫn sử dụng phần mềm Quản lý chất lượng GXD',
+  description: 'Hướng dẫn sử dụng phần mềm Dự án GXD',
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }], // Custom favicon
@@ -28,17 +28,21 @@ module.exports = {
     'vuepress-plugin-zooming': {},
 
     sitemap: {
-      hostname: 'https://qlcl.gxd.vn',
+      hostname: 'https://lapduan.gxd.vn',
     },
   },
 
   themeConfig: {
     activeHeaderLinks: false,
     nav: [
-      { text: 'Hướng dẫn', link: '/guide/' }, // Link to a non-api-documentation section
-      { text: 'Tình huống', link: '/case/' }, // Link to a non-api-documentation section
-      { text: 'Văn bản', link: '/document/danh-muc.html' }, // Lint to our API documentation route
-      { text: 'Nhật ký', link: '/guide/nhat-ky-thi-cong.html' }, // Lint to our API documentation route
+      { text: 'Trang chủ', link: '/' },
+      { text: 'Hướng dẫn', link: '/guide/' },
+      { text: 'Tình huống', link: '/guide/tinh-huong-hoi-dap' },
+      { text: 'Pháp lý', link: '/guide/co-so-phap-ly.html' },
+      { text: 'Nhật ký', link: '/guide/lap-nhat-ky-thi-cong.html' },
+      { text: 'Liên hệ', link: '/guide/lien-he.html' },
+      { text: 'Luật', link: '/legal/luat-xay-dung-50-ghep-62.html' },
+      { text: 'Hỏi đáp', link: '/case/tinh-huong-1.html' },
     ],
 
     sidebar: {
@@ -48,37 +52,52 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2,
           children: [
-            // Normal pages
-            'introduction',
-            'getting-started', /* /guide/getting-started.html */
+            ['/guide/chung-chi-hanh-nghe', 'Chứng chỉ hành nghề'],
+            ['/guide/co-so-phap-ly', 'Cơ sở pháp lý'],
+            ['/guide/danh-cho-nguoi-moi', 'Dành cho người mới'],
+            ['/guide/danh-muc-van-ban', 'Danh mục văn bản'],
+            ['/guide/ho-so-bieu-mau-nhat-ky', 'Hồ sơ biểu mẫu nhật ký'],
+            ['/guide/kien-thuc-excel-co-ban', 'Kiến thức Excel cơ bản'],
+            ['/guide/gioi-thieu-phan-mem-du-an-gxd', 'Giới thiệu phần mềm'],
+            ['/guide/ho-so-bieu-mau-nhat-ky', 'Hồ sơ biểu mẫu nhật ký'],
+            ['/guide/lap-nhat-ky-thi-cong', 'Lập nhật ký thi công'],
+            ['/guide/phan-mem-tien-ich-bien-tap-ho-so', 'Phần mềm tiện ích biên tập hồ sơ'],
+            ['/guide/tinh-huong-hoi-dap', 'Tình huống hỏi đáp'],
+            ['/guide/trach-nhiem-cua-chu-dau-tu', 'Trách nhiệm của Chủ đầu tư'],
+            ['/guide/trach-nhiem-cua-nha-thau', 'Trách nhiệm của Nhà thầu'],
+            ['/guide/trach-nhiem-cua-tu-van', 'Trách nhiệm của Tư vấn lập dự án'],
+            ['/guide/vai-tro-cua-nhat-ky-thi-cong', 'Vai trò của nhật ký thi công'],
+            ['/guide/y-kien-cua-dong-nghiep', 'Ý kiến của đồng nghiệp'],
+            ['/guide/lien-he', 'Liên hệ'],
             '', // Ref. to the `README.md` file
-            'configuration', /* /guide/configuration.html */
-            'review'
           ],
-          initialOpenGroupIndex: 2 // optional, defaults to 0, defines the index of initially opened subgroup
+          initialOpenGroupIndex: 2, // optional, defaults to 0, defines the index of initially opened subgroup
         },
       ],
-      
-      // Your API documentation sidebar
-      // Here is where will be generated your files (`docs/demo/` in this case).
-      // This is the directory you configured in your `phpdoc.dist.xml` as target
-      // directory (or `-t` option of phpdoc)
-      // '/demo/': [
-      //   {
-      //     title: 'Văn bản',
-      //     collapsable: false,
-      //     children: [
-      //       //
-      //       '', // Ref. to the `README.md` file
-      //       'danh-muc', // Ref. to the `classes.md` file
-      //       'lxd-50-gheop-62', // Ref. to the `interfaces.md` file
-      //       'lxd-so-62', // Ref. to the `traits.md` file
-      //       'ND-06-2021-qlcl', // Ref. to the `functions.md` file
-      //       'constants', // Ref. to the `constants.md` file
-      //     ],
-      //   },
-      // ],
-      // '/': [''],
+      '/legal/': [
+        {
+          title: 'Pháp lý dự án đầu tư',
+          collapsable: true,
+          sidebarDepth: 2,
+          children: [
+            ['/legal/luat-xay-dung-50-ghep-62', 'Luật Xây dựng 50 ghép 62'],
+            '', // Ref. to the `README.md` file
+          ],
+          initialOpenGroupIndex: 2, // optional, defaults to 0, defines the index of initially opened subgroup
+        },
+      ],
+      '/case/': [
+        {
+          title: 'Tình huống thường gặp Q&A',
+          collapsable: true,
+          sidebarDepth: 2,
+          children: [
+            ['/case/tinh-huong-1', 'Các tình huống 1'],
+            '', // Ref. to the `README.md` file
+          ],
+          initialOpenGroupIndex: 2, // optional, defaults to 0, defines the index of initially opened subgroup
+        },
+      ],
     },
 
     // You can ignore the following optional customizations --------------------
